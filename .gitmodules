@@ -1,0 +1,3 @@
+[submodule "submodules/ansible-webdocs"]
+	path = submodules/ansible-webdocs
+	url = https://github.com/jedelman8/ansible-webdocs.git

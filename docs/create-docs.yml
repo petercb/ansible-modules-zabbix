@@ -1,0 +1,18 @@
+---
+
+- hosts: localhost
+  connection: local
+  vars:
+    heading: 'Ansible Zabbix modules'
+    requirements:
+      - 'zabbix-api python module'
+  tasks:
+    - name: get docs and examples for modules
+      ansible_docstring:
+        path: '../ansible/modules/zabbix/'
+      register: modules
+
+    - name: build web/markdown ansible docs
+      template:
+        src: 'templates/ansible-docs.j2'
+        dest: './ansible-modules-zabbix.md'
