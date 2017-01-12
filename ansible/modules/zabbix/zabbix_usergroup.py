@@ -47,30 +47,30 @@ options:
     debug_mode:
         description:
             - Whether debug mode is enabled or disabled
-            - Possible values are: 
-            - 0 : (default) disabled
-            - 1 : enabled.
+            - Possible values are
+            - 0 - (default) disabled
+            - 1 - enabled.
         required: false
     gui_access:
         description:
             - Frontend authentication method of the users in the group
-            - Possible values: 
-            - 0 : (default) use the system default authentication method
-            - 1 : use internal authentication
-            - 2 : disable access to the frontend
+            - Possible values
+            - 0 - (default) use the system default authentication method
+            - 1 - use internal authentication
+            - 2 - disable access to the frontend
         required: false
     status:
         description:
             - Whether the user group is enabled or disabled
-            - Possible values are:
-            - 0 : (default) enabled
-            - 1 : disabled
+            - Possible values are
+            - 0 - (default) enabled
+            - 1 - disabled
         required: false
     rights:
         description:
             - The host groups and privileges the group has
-            - An array of dictionary entries in the form of:
-            - [{'host_group': 'name', 'permission': 0}]
+            - An array of dictionary entries in the form of
+            - "[{'host_group': 'name', 'permission': 0}]"
         required: false
     state:
         description:

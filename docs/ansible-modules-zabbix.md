@@ -126,18 +126,18 @@ Zabbix user group creates/updates/deletes
 
 | Parameter     | required    | default  | choices    | comments |
 | ------------- |-------------| ---------|----------- |--------- |
-| status  |   no  |  | |  Whether the user group is enabled or disabled  {u'Possible values are': None}  {u'0': u'(default) enabled'}  {u'1': u'disabled'}  |
+| status  |   no  |  | |  Whether the user group is enabled or disabled  Possible values are  0 - (default) enabled  1 - disabled  |
 | http_login_password  |   no  |    | |  Basic Auth password  |
 | name  |   yes  |  | |  name of the group  |
-| rights  |   no  |  | |  The host groups and privileges the group has  {u'An array of dictionary entries in the form of': None}  [{u'host_group': u'name', u'permission': 0}]  |
+| rights  |   no  |  | |  The host groups and privileges the group has  An array of dictionary entries in the form of  [{'host_group': 'name', 'permission': 0}]  |
 | login_user  |   yes  |  | |  Zabbix api user name.  |
 | http_login_user  |   no  |    | |  Basic Auth login  |
 | server_url  |   yes  |  | |  Url of Zabbix server, with protocol (http or https).  |
 | state  |   no  |  present  | <ul> <li>present</li>  <li>absent</li> </ul> |  State of the user  On C(present), it will create or update the group  On C(absent), it will remove the group  |
-| debug_mode  |   no  |  | |  Whether debug mode is enabled or disabled  {u'Possible values are': None}  {u'0': u'(default) disabled'}  {u'1': u'enabled.'}  |
+| debug_mode  |   no  |  | |  Whether debug mode is enabled or disabled  Possible values are  0 - (default) disabled  1 - enabled.  |
 | timeout  |   |  10  | |  The timeout of API request (seconds).  |
 | login_password  |   yes  |  | |  Zabbix api user password.  |
-| gui_access  |   no  |  | |  Frontend authentication method of the users in the group  {u'Possible values': None}  {u'0': u'(default) use the system default authentication method'}  {u'1': u'use internal authentication'}  {u'2': u'disable access to the frontend'}  |
+| gui_access  |   no  |  | |  Frontend authentication method of the users in the group  Possible values  0 - (default) use the system default authentication method  1 - use internal authentication  2 - disable access to the frontend  |
 
 
  
@@ -255,4 +255,4 @@ Zabbix global macro creates/updates/deletes
 
 
 ---
-Modified: 2017-01-12 10:58:24 EST
+Modified: 2017-01-12 15:19:27 EST
