@@ -8,17 +8,15 @@ files = [
     "ansible/modules/zabbix",
 ]
 
-long_description = open('README.md', 'r').read()
-
 setup(
     name='ansible-modules-zabbix',
-    version='0.1',
     description='Zabbix Ansible Modules',
-    long_description=long_description,
+    use_scm_version=True,
     url='https://github.com/petercb/ansible-modules-zabbix',
     author='Peter Burns',
     author_email='pcburns@outlook.com',
     license='MIT',
+    setup_requires=['setuptools_scm'],
     py_modules=py_files,
     packages=files,
     install_requires = [
