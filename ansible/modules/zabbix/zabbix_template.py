@@ -250,7 +250,7 @@ def main():
             module.fail_json(msg="Unknown state: %s" % state)
 
     except Exception as e:
-        module.fail_json(msg='')
+        module.fail_json(msg='Failed to retrieve template object')
 
 if __name__ == '__main__':
     main()
