@@ -75,6 +75,7 @@ class ValueMap(AnsibleZabbix):
         super(ValueMap, self).__init__(module)
         self.state = module.params['state']
         self.valuemap_file = module.params['valuemap_file']
+        self.name = module.params['name']
 
 
     def exists(self):
@@ -129,7 +130,6 @@ class ValueMap(AnsibleZabbix):
             return True
         except Exception as eret:
             self._module.fail_json(
-                name=self.name,
                 msg="failed to import valuemap: %s" % eret
             )
 
@@ -161,7 +161,7 @@ def main():
         valuemap.create()
         module.exit_json(
             changed=True,
-            result="Successfully imported valuemap %s" % valuemap.name
+            result="Successfully imported valuemap file %s" % valuemap.valuemap_file
         )
 
 if __name__ == '__main__':
